@@ -11,6 +11,7 @@
 ### Dashboard
 - [ ] A seller can view their basic dashboard with all-time Items Sold and Profit Earned (required)
 - [ ] A seller can change the view to Active, Today, Yesterday, and All-Time data points (required)
+- [ ] A seller can swipe to change the view to Active, Today, etc. (optional)
 - [ ] A seller can view the order history of their campaigns (required)
 - [ ] A seller can view their payout history (optional)
 - [ ] A seller can view a history of their campaigns going to print (optional)
@@ -27,11 +28,14 @@
 - [ ] A seller can see the event history of the campaign (required)
 - [ ] A seller can tap a link to see the buyer's view of the campaign on mobile (required)
 - [ ] A seller can see a graph of sales over time for this campaign (optional)
+- [ ] Seller can see a map of their buyers (optional)
 
 ### Notifications
 - [ ] Seller receives a notification whenever a new sale occurs (required)
 - [ ] Seller receives a notification whenever one of their payouts is completed (required)
 - [ ] Seller receives a notification whenever a campaign goes to print (required)
+- [ ] Seller receives an audible cash register sound when these notifications happen (optional)
+- [ ] List of notifications auto-updates (optional)
 
 ### Apple Watch
 - [ ] Seller receives Apple Watch notifications for the above events (optional)
