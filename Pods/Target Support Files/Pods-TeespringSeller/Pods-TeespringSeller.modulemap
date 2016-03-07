@@ -1,0 +1,6 @@
+framework module Pods_TeespringSeller {
+  umbrella header "Pods-TeespringSeller-umbrella.h"
+
+  export *
+  module * { export * }
+}
