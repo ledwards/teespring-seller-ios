@@ -40,3 +40,7 @@
 ### Apple Watch
 - [ ] Seller receives Apple Watch notifications for the above events (optional)
 - [ ] Seller can see a Complication of their daily campaign stats on their Watch home screen (optional)
+
+## Video Walkthrough
+### Week 1
+  <img src='screencaps/week1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
