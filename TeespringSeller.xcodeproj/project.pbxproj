@@ -15,8 +15,6 @@
 		9B1B33B91C8C174400533D89 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33B81C8C174400533D89 /* HamburgerViewController.swift */; };
 		9B1B33BB1C8C175000533D89 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33BA1C8C175000533D89 /* MenuViewController.swift */; };
 		9B1B33BD1C8C1E1100533D89 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33BC1C8C1E1100533D89 /* DashboardViewController.swift */; };
-		9B1B33BF1C8C1E1C00533D89 /* DesignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33BE1C8C1E1C00533D89 /* DesignsViewController.swift */; };
-		9B1B33C11C8C1E2C00533D89 /* DesignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33C01C8C1E2C00533D89 /* DesignDetailViewController.swift */; };
 		9B1B33C41C8CEE5400533D89 /* NSDate+TimeAgoInWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33C31C8CEE5400533D89 /* NSDate+TimeAgoInWords.swift */; };
 		9B1B33CB1C8CEED500533D89 /* CampaignRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33C61C8CEED500533D89 /* CampaignRoot.swift */; };
 		9B1B33CC1C8CEED500533D89 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33C71C8CEED500533D89 /* Dashboard.swift */; };
@@ -25,6 +23,11 @@
 		9B1B33CF1C8CEED500533D89 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33CA1C8CEED500533D89 /* Update.swift */; };
 		9B1B33D21C8CEF0500533D89 /* TSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33D11C8CEF0500533D89 /* TSAPI.swift */; };
 		9B1B33D51C8D1B4000533D89 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33D41C8D1B4000533D89 /* MenuCell.swift */; };
+		9B1B33D81C8D337600533D89 /* CampaignsSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33D71C8D337600533D89 /* CampaignsSearchBar.swift */; };
+		9B1B33DA1C8D338C00533D89 /* UpdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33D91C8D338C00533D89 /* UpdateCell.swift */; };
+		9B1B33DD1C8D34FA00533D89 /* DesignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */; };
+		9B1B33DE1C8D34FA00533D89 /* DesignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */; };
+		9B8E05D01C8D3E160044AB2F /* CampaignRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */; };
 		AE672F1EF16FA73F71651250 /* Pods_TeespringSeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B98378F826036219080AE19 /* Pods_TeespringSeller.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +44,6 @@
 		9B1B33B81C8C174400533D89 /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
 		9B1B33BA1C8C175000533D89 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9B1B33BC1C8C1E1100533D89 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		9B1B33BE1C8C1E1C00533D89 /* DesignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignsViewController.swift; sourceTree = "<group>"; };
-		9B1B33C01C8C1E2C00533D89 /* DesignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignDetailViewController.swift; sourceTree = "<group>"; };
 		9B1B33C31C8CEE5400533D89 /* NSDate+TimeAgoInWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+TimeAgoInWords.swift"; sourceTree = "<group>"; };
 		9B1B33C61C8CEED500533D89 /* CampaignRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignRoot.swift; sourceTree = "<group>"; };
 		9B1B33C71C8CEED500533D89 /* Dashboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
@@ -51,6 +52,11 @@
 		9B1B33CA1C8CEED500533D89 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		9B1B33D11C8CEF0500533D89 /* TSAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSAPI.swift; sourceTree = "<group>"; };
 		9B1B33D41C8D1B4000533D89 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		9B1B33D71C8D337600533D89 /* CampaignsSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignsSearchBar.swift; sourceTree = "<group>"; };
+		9B1B33D91C8D338C00533D89 /* UpdateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCell.swift; sourceTree = "<group>"; };
+		9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignsViewController.swift; sourceTree = "<group>"; };
+		9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignDetailViewController.swift; sourceTree = "<group>"; };
+		9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignRootCell.swift; sourceTree = "<group>"; };
 		E3816405F8C2C950D576D17E /* Pods-TeespringSeller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeespringSeller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeespringSeller/Pods-TeespringSeller.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,8 +124,8 @@
 				9B1B33B81C8C174400533D89 /* HamburgerViewController.swift */,
 				9B1B33BA1C8C175000533D89 /* MenuViewController.swift */,
 				9B1B33BC1C8C1E1100533D89 /* DashboardViewController.swift */,
-				9B1B33BE1C8C1E1C00533D89 /* DesignsViewController.swift */,
-				9B1B33C01C8C1E2C00533D89 /* DesignDetailViewController.swift */,
+				9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */,
+				9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +160,9 @@
 		9B1B33D31C8D1B2A00533D89 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9B1B33D91C8D338C00533D89 /* UpdateCell.swift */,
+				9B1B33D71C8D337600533D89 /* CampaignsSearchBar.swift */,
+				9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */,
 				9B1B33D41C8D1B4000533D89 /* MenuCell.swift */,
 			);
 			name = Views;
@@ -299,10 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B1B33C41C8CEE5400533D89 /* NSDate+TimeAgoInWords.swift in Sources */,
+				9B1B33D81C8D337600533D89 /* CampaignsSearchBar.swift in Sources */,
+				9B1B33DD1C8D34FA00533D89 /* DesignsViewController.swift in Sources */,
 				9B1B33B91C8C174400533D89 /* HamburgerViewController.swift in Sources */,
 				9B1B33CF1C8CEED500533D89 /* Update.swift in Sources */,
+				9B1B33DE1C8D34FA00533D89 /* DesignDetailViewController.swift in Sources */,
 				9B1B33CC1C8CEED500533D89 /* Dashboard.swift in Sources */,
-				9B1B33BF1C8C1E1C00533D89 /* DesignsViewController.swift in Sources */,
+				9B8E05D01C8D3E160044AB2F /* CampaignRootCell.swift in Sources */,
 				9B1B33BD1C8C1E1100533D89 /* DashboardViewController.swift in Sources */,
 				9B1B33D21C8CEF0500533D89 /* TSAPI.swift in Sources */,
 				9B1B33BB1C8C175000533D89 /* MenuViewController.swift in Sources */,
@@ -310,7 +322,7 @@
 				9B1B33CB1C8CEED500533D89 /* CampaignRoot.swift in Sources */,
 				9B1B33B71C8C169300533D89 /* LoginViewController.swift in Sources */,
 				9B1B33D51C8D1B4000533D89 /* MenuCell.swift in Sources */,
-				9B1B33C11C8C1E2C00533D89 /* DesignDetailViewController.swift in Sources */,
+				9B1B33DA1C8D338C00533D89 /* UpdateCell.swift in Sources */,
 				9B1B33A41C8C005A00533D89 /* AppDelegate.swift in Sources */,
 				9B1B33CE1C8CEED500533D89 /* TSColor.swift in Sources */,
 			);

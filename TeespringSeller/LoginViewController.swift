@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 import MBProgressHUD
 
 class LoginViewController: UIViewController {
@@ -62,11 +61,13 @@ class LoginViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let menuVC = storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as! MenuViewController
         let hamburgerVC = storyboard.instantiateViewControllerWithIdentifier("HamburgerViewController") as! HamburgerViewController
+        let dashboardVC = storyboard.instantiateViewControllerWithIdentifier("DashboardNavigationController") as! UINavigationController
         
         menuVC.hamburgerViewController = hamburgerVC
         hamburgerVC.menuViewController = menuVC
-        
-//                self.delegate!.getDashboard()
+        hamburgerVC.contentViewController = dashboardVC
+        self.delegate = dashboardVC.topViewController as? DashboardViewController
+        self.delegate!.getDashboard()
         
         self.presentViewController(hamburgerVC, animated: true, completion: nil)
         

@@ -12,7 +12,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllers: [UIViewController] = []
-    let titles = ["Logout"]
+    let titles = ["Dashboard", "Designs", "Logout"]
     
     var hamburgerViewController: HamburgerViewController!
     

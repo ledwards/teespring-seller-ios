@@ -32,6 +32,7 @@ class HamburgerViewController: UIViewController {
                 oldContentViewController.didMoveToParentViewController(nil)
             }
             
+            contentViewController.view.frame = self.contentView.bounds
             contentViewController.willMoveToParentViewController(self)
             contentView.addSubview(contentViewController.view)
             contentViewController.didMoveToParentViewController(self)
