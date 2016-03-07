@@ -27,6 +27,10 @@ class LoginViewController: UIViewController {
         loginButton.backgroundColor = TSColor.lightBlueColor()
         loginButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         loginButton.layer.cornerRadius = 3
+        
+        let image = UIImage(named: "pattern-basic-blue")!
+        let uicolor = UIColor(patternImage: image)
+        view.backgroundColor = uicolor
     }
     
     // TODO: This animation sucks, should bypass login entirely when logged in

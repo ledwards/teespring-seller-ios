@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9B1B33A41C8C005A00533D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33A31C8C005A00533D89 /* AppDelegate.swift */; };
 		9B1B33A91C8C005A00533D89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B1B33A71C8C005A00533D89 /* Main.storyboard */; };
-		9B1B33AB1C8C005A00533D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B1B33AA1C8C005A00533D89 /* Assets.xcassets */; };
 		9B1B33AE1C8C005A00533D89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B1B33AC1C8C005A00533D89 /* LaunchScreen.storyboard */; };
 		9B1B33B71C8C169300533D89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33B61C8C169300533D89 /* LoginViewController.swift */; };
 		9B1B33B91C8C174400533D89 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33B81C8C174400533D89 /* HamburgerViewController.swift */; };
@@ -28,6 +27,7 @@
 		9B1B33DD1C8D34FA00533D89 /* DesignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */; };
 		9B1B33DE1C8D34FA00533D89 /* DesignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */; };
 		9B8E05D01C8D3E160044AB2F /* CampaignRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */; };
+		9B8E05D21C8D75130044AB2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8E05D11C8D75130044AB2F /* Assets.xcassets */; };
 		AE672F1EF16FA73F71651250 /* Pods_TeespringSeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B98378F826036219080AE19 /* Pods_TeespringSeller.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,6 @@
 		9B1B33A01C8C005A00533D89 /* TeespringSeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeespringSeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1B33A31C8C005A00533D89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B1B33A81C8C005A00533D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B1B33AA1C8C005A00533D89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B1B33AD1C8C005A00533D89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B1B33AF1C8C005A00533D89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B1B33B61C8C169300533D89 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignsViewController.swift; sourceTree = "<group>"; };
 		9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignDetailViewController.swift; sourceTree = "<group>"; };
 		9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignRootCell.swift; sourceTree = "<group>"; };
+		9B8E05D11C8D75130044AB2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3816405F8C2C950D576D17E /* Pods-TeespringSeller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeespringSeller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeespringSeller/Pods-TeespringSeller.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,8 +109,8 @@
 				9B1B33B51C8C167700533D89 /* ViewControllers */,
 				9B1B33D31C8D1B2A00533D89 /* Views */,
 				9B1B33A31C8C005A00533D89 /* AppDelegate.swift */,
+				9B8E05D11C8D75130044AB2F /* Assets.xcassets */,
 				9B1B33A71C8C005A00533D89 /* Main.storyboard */,
-				9B1B33AA1C8C005A00533D89 /* Assets.xcassets */,
 				9B1B33AC1C8C005A00533D89 /* LaunchScreen.storyboard */,
 				9B1B33AF1C8C005A00533D89 /* Info.plist */,
 			);
@@ -247,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B1B33AE1C8C005A00533D89 /* LaunchScreen.storyboard in Resources */,
-				9B1B33AB1C8C005A00533D89 /* Assets.xcassets in Resources */,
+				9B8E05D21C8D75130044AB2F /* Assets.xcassets in Resources */,
 				9B1B33A91C8C005A00533D89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

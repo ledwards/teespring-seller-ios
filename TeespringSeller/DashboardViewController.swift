@@ -66,8 +66,6 @@ class DashboardViewController: UIViewController {
         refreshControl.addTarget(self, action: "refreshCallback:", forControlEvents: .ValueChanged)
         tableView.insertSubview(refreshControl, atIndex: 0)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "search"), style: .Plain, target: self, action: "searchPressed:")
-        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -80,29 +78,29 @@ class DashboardViewController: UIViewController {
         countFormatter.numberStyle = .DecimalStyle
         
         for button in [self.activeButton, self.todayButton, self.yesterdayButton, self.allTimeButton] {
-            button.titleLabel?.font = UIFont.systemFontOfSize(10.0)
+            button.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         }
         
         switch selectedTimePeriod {
         case .Active:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.active_products_reserved!)
             self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.active_profit!)
-            activeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(10.0)
+            activeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
             
         case .Today:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.active_products_reserved_today!)
             self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.profit_made_today!)
-            todayButton.titleLabel?.font = UIFont.boldSystemFontOfSize(10.0)
+            todayButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
             
         case .Yesterday:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.active_products_reserved_yesterday!)
             self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.profit_made_yesterday!)
-            yesterdayButton.titleLabel?.font = UIFont.boldSystemFontOfSize(10.0)
+            yesterdayButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
             
         case .AllTime:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.total_products_reserved!)
             self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.total_profit!)
-            allTimeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(10.0)
+            allTimeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
         }
     }
     
@@ -152,7 +150,7 @@ class DashboardViewController: UIViewController {
         getUpdates(refreshControl)
     }
     
-    func searchPressed(sender: UIView) {
+    func hamburgerPressed(sender: UIView) {
         // go to Designs page
     }
     
