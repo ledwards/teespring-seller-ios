@@ -19,6 +19,14 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let dashboardVC = storyboard.instantiateViewControllerWithIdentifier("DashboardNavigationController") as! UINavigationController
+        let designsVC = storyboard.instantiateViewControllerWithIdentifier("DesignsNavigationController") as! UINavigationController
+        let loginVC = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        
+        viewControllers = [dashboardVC, designsVC, loginVC]
+        
         tableView.estimatedRowHeight = 32.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = TSColor.lightBlueColor()
@@ -36,7 +44,7 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.titles.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -50,6 +58,11 @@ extension MenuViewController : UITableViewDataSource {
 extension MenuViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        hamburgerViewController.contentViewController = viewControllers[indexPath.row]
+        if indexPath.row == self.viewControllers.count - 1 {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("user.token")
+            self.presentViewController(self.viewControllers[indexPath.row], animated: true, completion: nil)
+        } else {
+            hamburgerViewController.contentViewController = viewControllers[indexPath.row]
+        }
     }
 }

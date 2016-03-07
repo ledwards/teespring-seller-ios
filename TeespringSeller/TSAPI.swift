@@ -73,6 +73,7 @@ struct TSAPI {
     func getCampaigns(searchTerm: String? = nil, successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
         var params = [String:String]()
         params["access_token"] = self.accessToken
+        params["states"] = "active,success"
         if let q = searchTerm { params["query"] = q }
         networkRequest("campaigns", params: params, successCallback: successCallback, errorCallback: errorCallback)
     }

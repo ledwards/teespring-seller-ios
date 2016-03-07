@@ -28,7 +28,7 @@ class CampaignRoot {
         name = dictionary["name"] as? String
         designURL = NSURL(string: dictionary["design_thumbnail_url"] as! String)
         totalSoldCount = dictionary["total_units"] as? Int
-        totalPayoutAmount = dictionary["total_payout_amount"] as? Double
+        totalPayoutAmount = dictionary["total_payout_amount"]!["value"] as? Double
 
         let campaigns = dictionary["campaigns"] as! [NSDictionary]
         lastCampaignSoldCount = campaigns.last!["units"] as? Int

@@ -691,7 +691,7 @@
                                             <outlet property="designImage" destination="zES-wP-N8Q" id="JcU-yA-RiO"/>
                                             <outlet property="nameLabel" destination="8xK-6R-TVp" id="2U4-Ok-wRg"/>
                                             <outlet property="soldCountLabel" destination="dvq-WC-jcH" id="SfT-1U-P92"/>
-                                            <segue destination="MF3-Yh-uuU" kind="show" action="showDetailViewController:sender:" id="rWY-us-h2R"/>
+                                            <segue destination="MF3-Yh-uuU" kind="push" identifier="ShowDesignDetail" id="rWY-us-h2R"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

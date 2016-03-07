@@ -20,6 +20,8 @@ class DesignsViewController: UIViewController, UITableViewDataSource, UITableVie
     let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
+        getCampaigns()
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -47,7 +49,7 @@ class DesignsViewController: UIViewController, UITableViewDataSource, UITableVie
         let detailViewController = segue.destinationViewController as! DesignDetailViewController
         
         let backItem = UIBarButtonItem()
-        backItem.title = "Search"
+        backItem.title = "Back"
         navigationItem.backBarButtonItem = backItem
         detailViewController.navigationItem.title = campaignRoot.name
         

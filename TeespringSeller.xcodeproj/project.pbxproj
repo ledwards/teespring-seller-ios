@@ -102,12 +102,12 @@
 		9B1B33A21C8C005A00533D89 /* TeespringSeller */ = {
 			isa = PBXGroup;
 			children = (
-				9B1B33D61C8D1C7F00533D89 /* Libraries */,
-				9B1B33D31C8D1B2A00533D89 /* Views */,
 				9B1B33D01C8CEEEE00533D89 /* Clients */,
 				9B1B33C21C8CEE2D00533D89 /* Extensions */,
+				9B1B33D61C8D1C7F00533D89 /* Libraries */,
 				9B1B33C51C8CEEA600533D89 /* Models */,
 				9B1B33B51C8C167700533D89 /* ViewControllers */,
+				9B1B33D31C8D1B2A00533D89 /* Views */,
 				9B1B33A31C8C005A00533D89 /* AppDelegate.swift */,
 				9B1B33A71C8C005A00533D89 /* Main.storyboard */,
 				9B1B33AA1C8C005A00533D89 /* Assets.xcassets */,
