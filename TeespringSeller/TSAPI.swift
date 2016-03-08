@@ -21,92 +21,51 @@ let PATHS = [
 ]
 
 struct TSAPI {
-    var paths = [String: NSURLComponents]()
+    var paths = [String:String]()
     let accessToken : String
     let appId: String
     var baseUrl: String
     
     init(host: String = HOST, port: Int = PORT, token: String = "", appId: String = APP_ID) {
-        for (name, path) in PATHS {
-            let url = NSURLComponents()
-            url.scheme = "https"
-            url.host = host
-            url.path = path
-            url.port = port
-            self.paths[name] = url
-        }
+        self.paths = PATHS
         self.baseUrl = "https://\(host):\(port)"
         self.accessToken = token
         self.appId = appId
     }
     
     func getAccessToken(email: String, password: String, successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
-        Alamofire.request(.POST, "\(self.baseUrl)\(PATHS["auth"]!)", parameters: ["email": email, "password": password, "app_id": self.appId])
-            .validate()
-            .responseJSON { response in
-                switch response.result {
-                case .Success:
-                    if let JSON = response.result.value {
-                        if let error = JSON["error"] { // placeholder until we can use .Failure case
-                            if let _ = error {
-                                errorCallback!(NSError(domain: "placeholder", code: 400, userInfo: JSON as? [NSObject : AnyObject]))
-                            } else {
-                                successCallback(JSON as! NSDictionary)
-                            }
-                        }
-                    }
-                case .Failure(let error):
-                    // TODO: Make API return error codes for login and use this instead
-                    errorCallback!(error)
-                }
-        }
+        apiRequest(Alamofire.Method.POST, pathName: "auth", parameters: ["email": email, "password": password, "app_id": self.appId], successCallback: successCallback, errorCallback: errorCallback)
     }
     
     func getDashboard(successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
-        networkRequest("dashboard", params: ["access_token": self.accessToken], successCallback: successCallback, errorCallback: errorCallback)
+        apiRequest(Alamofire.Method.GET, pathName: "dashboard", parameters: ["access_token": self.accessToken], successCallback: successCallback, errorCallback: errorCallback)
     }
     
     func getOrders(successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
-        networkRequest("orders", params: ["access_token": self.accessToken], successCallback: successCallback, errorCallback: errorCallback)
+        apiRequest(Alamofire.Method.GET, pathName: "orders", parameters: ["access_token": self.accessToken], successCallback: successCallback, errorCallback: errorCallback)
     }
     
     func getCampaigns(searchTerm: String? = nil, successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
-        var params = [String:String]()
-        params["access_token"] = self.accessToken
-        params["states"] = "active,success"
-        if let q = searchTerm { params["query"] = q }
-        networkRequest("campaigns", params: params, successCallback: successCallback, errorCallback: errorCallback)
+        let params = ["access_token": self.accessToken, "states": "active,success", "query": searchTerm ?? ""]
+        apiRequest(Alamofire.Method.GET, pathName: "campaigns", parameters: params, successCallback: successCallback, errorCallback: errorCallback)
     }
     
-    private func networkRequest(pathName: String, params: [String:String], successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
-        let urlComponents = paths[pathName]
-        let queryItems = params.map{ (k,v) in NSURLQueryItem(name: k, value: v) }
-        urlComponents?.queryItems = queryItems
-        let url = urlComponents?.URL!
-        
-        let request = NSURLRequest(URL: url!)
-        let session = NSURLSession(
-            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
-            delegate:nil,
-            delegateQueue:NSOperationQueue.mainQueue()
-        )
-        NSLog("requestUrl: \(url)")
-        
-        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request,
-            completionHandler: { (dataOrNil, responseOrNil, errorOrNil) in
-                if let requestError = errorOrNil {
-                    errorCallback?(requestError)
-                } else {
-                    if let data = dataOrNil {
-                        if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
-                            data, options:[]) as? NSDictionary {
-                                NSLog("response: \(responseDictionary)")
-                                successCallback(responseDictionary)
-                        }
-                    }
+    private func path(pathName: String) -> String {
+        return "\(self.baseUrl)\(self.paths[pathName]!)"
+    }
+    
+    private func apiRequest(verb: Alamofire.Method, pathName: String, parameters: [String:String], successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
+        Alamofire.request(verb, path(pathName), parameters: parameters)
+        .validate()
+        .responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let JSON = response.result.value {
+                    successCallback(JSON as! NSDictionary)
                 }
-        });
-        task.resume()
+            case .Failure(let error):
+                errorCallback!(error)
+            }
+        }
     }
-    
 }
