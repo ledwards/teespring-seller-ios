@@ -20,10 +20,13 @@ class DesignsViewController: UIViewController, UITableViewDataSource, UITableVie
     let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
-        getCampaigns()
+        tableView.estimatedRowHeight = 32.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        getCampaigns()
     }
     
     func getCampaigns(searchTerm: String? = nil, filters: [String] = []) {

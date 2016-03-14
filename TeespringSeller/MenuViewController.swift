@@ -27,8 +27,6 @@ class MenuViewController: UIViewController {
         
         viewControllers = [dashboardVC, designsVC, loginVC]
         
-        tableView.estimatedRowHeight = 32.0
-        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = TSColor.lightBlueColor()
         
         tableView.dataSource = self

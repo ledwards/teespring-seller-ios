@@ -13,6 +13,7 @@ class Update: NSObject {
     let type: UpdateType
     let createdAt: NSDate?
     let createdAgo: String?
+    let order: Order?
     
     enum UpdateType {
         case Order
@@ -30,6 +31,7 @@ class Update: NSObject {
             message = "Someone bought \(quantity) \(campaignName) \(product)!"
         }
         type = .Order
+        self.order = order
         createdAt = order.createdAt ?? NSDate()
         createdAgo = createdAt?.timeAgoInWords()
     }

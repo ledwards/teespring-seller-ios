@@ -66,14 +66,16 @@ class DashboardViewController: UIViewController {
         refreshControl.addTarget(self, action: "refreshCallback:", forControlEvents: .ValueChanged)
         tableView.insertSubview(refreshControl, atIndex: 0)
         
+        tableView.estimatedRowHeight = 32.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        getDashboard()
     }
     
     func renderDashboard() {
-        let currencyFormatter = NSNumberFormatter()
-        currencyFormatter.numberStyle = .CurrencyStyle
-        
         let countFormatter = NSNumberFormatter()
         countFormatter.numberStyle = .DecimalStyle
         
@@ -84,22 +86,22 @@ class DashboardViewController: UIViewController {
         switch selectedTimePeriod {
         case .Active:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.active_products_reserved!)
-            self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.active_profit!)
+            self.profitTotalView.text = self.dashboard.active_profit!.formattedAmount
             activeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
             
         case .Today:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.active_products_reserved_today!)
-            self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.profit_made_today!)
+            self.profitTotalView.text = self.dashboard.profit_made_today!.formattedAmount
             todayButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
             
         case .Yesterday:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.active_products_reserved_yesterday!)
-            self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.profit_made_yesterday!)
+            self.profitTotalView.text = self.dashboard.profit_made_yesterday!.formattedAmount
             yesterdayButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
             
         case .AllTime:
             self.soldCountView.text = countFormatter.stringFromNumber(self.dashboard.total_products_reserved!)
-            self.profitTotalView.text = currencyFormatter.stringFromNumber(self.dashboard.total_profit!)
+            self.profitTotalView.text = self.dashboard.total_profit!.formattedAmount
             allTimeButton.titleLabel?.font = UIFont.boldSystemFontOfSize(14.0)
         }
     }
@@ -125,7 +127,7 @@ class DashboardViewController: UIViewController {
             for element in (responseDictionary["orders"]! as! [NSDictionary]) {
                 let update = Update(order: Order(dictionary: element))
                 
-                // TODO: We need UUIDs for updates
+                // Using createdAt as a UUID...sorry
                 let existingUpdates = self.updates.map{ u in u.createdAt! }
                 if let _ = existingUpdates.indexOf(update.createdAt!) {
                 } else {
@@ -138,6 +140,7 @@ class DashboardViewController: UIViewController {
             }
             
             self.tableView.reloadData()
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
             },
             errorCallback: { dictionary in
                 // handle error
@@ -151,11 +154,21 @@ class DashboardViewController: UIViewController {
     }
     
     func hamburgerPressed(sender: UIView) {
-        // go to Designs page
+        // do something
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var indexPath: NSIndexPath? = nil
+        if let cell = sender as? UpdateCell {
+            indexPath = tableView.indexPathForCell(cell)
+            let order = self.updates[indexPath!.row].order
+            let vc = segue.destinationViewController as! OrderDetailViewController
+            vc.order = order
+        }
     }
 }
 
@@ -175,8 +188,7 @@ extension DashboardViewController : UITableViewDataSource {
 }
 
 extension DashboardViewController : UITableViewDelegate {
-    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        return nil
     }
 }

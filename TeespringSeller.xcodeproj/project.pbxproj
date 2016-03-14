@@ -28,6 +28,11 @@
 		9B1B33DE1C8D34FA00533D89 /* DesignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */; };
 		9B8E05D01C8D3E160044AB2F /* CampaignRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */; };
 		9B8E05D21C8D75130044AB2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8E05D11C8D75130044AB2F /* Assets.xcassets */; };
+		9B8E05DA1C9629B80044AB2F /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05D91C9629B80044AB2F /* OrderCell.swift */; };
+		9B8E05DC1C962EB90044AB2F /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05DB1C962EB90044AB2F /* LineItem.swift */; };
+		9B8E05DE1C9653DF0044AB2F /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05DD1C9653DF0044AB2F /* Money.swift */; };
+		9B8E05E01C9662EE0044AB2F /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05DF1C9662EE0044AB2F /* OrderDetailViewController.swift */; };
+		9B8E05E21C966ECC0044AB2F /* LineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05E11C966ECC0044AB2F /* LineItemCell.swift */; };
 		AE672F1EF16FA73F71651250 /* Pods_TeespringSeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B98378F826036219080AE19 /* Pods_TeespringSeller.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +62,11 @@
 		9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignDetailViewController.swift; sourceTree = "<group>"; };
 		9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignRootCell.swift; sourceTree = "<group>"; };
 		9B8E05D11C8D75130044AB2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B8E05D91C9629B80044AB2F /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		9B8E05DB1C962EB90044AB2F /* LineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		9B8E05DD1C9653DF0044AB2F /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		9B8E05DF1C9662EE0044AB2F /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		9B8E05E11C966ECC0044AB2F /* LineItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItemCell.swift; sourceTree = "<group>"; };
 		E3816405F8C2C950D576D17E /* Pods-TeespringSeller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeespringSeller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeespringSeller/Pods-TeespringSeller.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +136,7 @@
 				9B1B33BC1C8C1E1100533D89 /* DashboardViewController.swift */,
 				9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */,
 				9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */,
+				9B8E05DF1C9662EE0044AB2F /* OrderDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +156,8 @@
 				9B1B33C71C8CEED500533D89 /* Dashboard.swift */,
 				9B1B33C81C8CEED500533D89 /* Order.swift */,
 				9B1B33CA1C8CEED500533D89 /* Update.swift */,
+				9B8E05DB1C962EB90044AB2F /* LineItem.swift */,
+				9B8E05DD1C9653DF0044AB2F /* Money.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -163,7 +176,9 @@
 				9B1B33D91C8D338C00533D89 /* UpdateCell.swift */,
 				9B1B33D71C8D337600533D89 /* CampaignsSearchBar.swift */,
 				9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */,
+				9B8E05E11C966ECC0044AB2F /* LineItemCell.swift */,
 				9B1B33D41C8D1B4000533D89 /* MenuCell.swift */,
+				9B8E05D91C9629B80044AB2F /* OrderCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -311,17 +326,22 @@
 				9B1B33D81C8D337600533D89 /* CampaignsSearchBar.swift in Sources */,
 				9B1B33DD1C8D34FA00533D89 /* DesignsViewController.swift in Sources */,
 				9B1B33B91C8C174400533D89 /* HamburgerViewController.swift in Sources */,
+				9B8E05E01C9662EE0044AB2F /* OrderDetailViewController.swift in Sources */,
 				9B1B33CF1C8CEED500533D89 /* Update.swift in Sources */,
 				9B1B33DE1C8D34FA00533D89 /* DesignDetailViewController.swift in Sources */,
 				9B1B33CC1C8CEED500533D89 /* Dashboard.swift in Sources */,
 				9B8E05D01C8D3E160044AB2F /* CampaignRootCell.swift in Sources */,
+				9B8E05DA1C9629B80044AB2F /* OrderCell.swift in Sources */,
+				9B8E05DE1C9653DF0044AB2F /* Money.swift in Sources */,
 				9B1B33BD1C8C1E1100533D89 /* DashboardViewController.swift in Sources */,
 				9B1B33D21C8CEF0500533D89 /* TSAPI.swift in Sources */,
 				9B1B33BB1C8C175000533D89 /* MenuViewController.swift in Sources */,
 				9B1B33CD1C8CEED500533D89 /* Order.swift in Sources */,
 				9B1B33CB1C8CEED500533D89 /* CampaignRoot.swift in Sources */,
 				9B1B33B71C8C169300533D89 /* LoginViewController.swift in Sources */,
+				9B8E05E21C966ECC0044AB2F /* LineItemCell.swift in Sources */,
 				9B1B33D51C8D1B4000533D89 /* MenuCell.swift in Sources */,
+				9B8E05DC1C962EB90044AB2F /* LineItem.swift in Sources */,
 				9B1B33DA1C8D338C00533D89 /* UpdateCell.swift in Sources */,
 				9B1B33A41C8C005A00533D89 /* AppDelegate.swift in Sources */,
 				9B1B33CE1C8CEED500533D89 /* TSColor.swift in Sources */,
