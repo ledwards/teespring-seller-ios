@@ -11,7 +11,7 @@ import MBProgressHUD
 import Alamofire
 import AlamofireImage
 
-class DesignsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DesignsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,14 +31,15 @@ class DesignsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func getCampaigns(searchTerm: String? = nil, filters: [String] = []) {
         let client = TSAPI(token: defaults.stringForKey("user.token")!)
+        MBProgressHUD.showHUDAddedTo(self.tableView, animated: true)
         
         client.getCampaigns(searchTerm, successCallback: {responseDictionary in
             for element in (responseDictionary["campaign_roots"]! as! [NSDictionary]) {
                 let campaignRoot = CampaignRoot(dictionary: element)
                 self.campaignRoots.append(campaignRoot)
             }
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
-            self.tableView.reloadData()
+                MBProgressHUD.hideHUDForView(self.tableView, animated: true)
+                self.tableView.reloadData()
             },
             errorCallback: { dictionary in
                 // handle error
@@ -56,10 +57,11 @@ class DesignsViewController: UIViewController, UITableViewDataSource, UITableVie
         navigationItem.backBarButtonItem = backItem
         detailViewController.navigationItem.title = campaignRoot.name
         
-        self.tableView.deselectRowAtIndexPath(indexPath!, animated: true)
         detailViewController.campaignRoot = campaignRoot
     }
-    
+}
+
+extension DesignsViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return campaignRoots.count
     }
@@ -78,5 +80,11 @@ class DesignsViewController: UIViewController, UITableViewDataSource, UITableVie
         }
         
         return cell
+    }
+}
+
+extension DesignsViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

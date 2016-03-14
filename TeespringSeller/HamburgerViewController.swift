@@ -59,7 +59,10 @@ class HamburgerViewController: UIViewController {
         if sender.state == .Began {
             self.originalLeftMargin = self.leftMarginConstraint.constant
         } else if sender.state == .Changed {
-            self.leftMarginConstraint.constant = self.originalLeftMargin + translation.x
+            let newMargin = self.originalLeftMargin + translation.x
+            if newMargin >= 0 {
+                self.leftMarginConstraint.constant = newMargin
+            }
         } else if sender.state == .Ended {
             if velocity.x > 0 {
                 openMenu()

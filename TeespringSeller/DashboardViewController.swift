@@ -108,11 +108,11 @@ class DashboardViewController: UIViewController {
     
     func getDashboard() {
         let client = TSAPI(token: defaults.stringForKey("user.token")!)
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        MBProgressHUD.showHUDAddedTo(self.tableView, animated: true)
         
         client.getDashboard({responseDictionary in
                 self.dashboard = Dashboard(dictionary: responseDictionary["dashboard_stats"]![0] as! NSDictionary)
-                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                MBProgressHUD.hideHUDForView(self.tableView, animated: true)
                 self.getUpdates()
             },
             errorCallback: { dictionary in
@@ -140,7 +140,7 @@ class DashboardViewController: UIViewController {
             }
             
             self.tableView.reloadData()
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            MBProgressHUD.hideHUDForView(self.tableView, animated: true)
             },
             errorCallback: { dictionary in
                 // handle error

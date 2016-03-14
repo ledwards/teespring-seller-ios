@@ -12,7 +12,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllers: [UIViewController] = []
-    let titles = ["Dashboard", "Designs", "Logout"]
+    let titles = ["Dashboard", "Designs"]
     
     var hamburgerViewController: HamburgerViewController!
     
@@ -23,9 +23,8 @@ class MenuViewController: UIViewController {
         
         let dashboardVC = storyboard.instantiateViewControllerWithIdentifier("DashboardNavigationController") as! UINavigationController
         let designsVC = storyboard.instantiateViewControllerWithIdentifier("DesignsNavigationController") as! UINavigationController
-        let loginVC = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         
-        viewControllers = [dashboardVC, designsVC, loginVC]
+        viewControllers = [dashboardVC, designsVC]
         
         tableView.backgroundColor = TSColor.lightBlueColor()
         
@@ -38,6 +37,11 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func logoutPressed(sender: AnyObject) {
+        let loginVC = storyboard!.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user.token")
+        self.presentViewController(loginVC, animated: true, completion: nil)
+    }
 }
 
 extension MenuViewController : UITableViewDataSource {
@@ -56,11 +60,6 @@ extension MenuViewController : UITableViewDataSource {
 extension MenuViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        if indexPath.row == self.viewControllers.count - 1 {
-            NSUserDefaults.standardUserDefaults().removeObjectForKey("user.token")
-            self.presentViewController(self.viewControllers[indexPath.row], animated: true, completion: nil)
-        } else {
-            hamburgerViewController.contentViewController = viewControllers[indexPath.row]
-        }
+        hamburgerViewController.contentViewController = viewControllers[indexPath.row]
     }
 }
