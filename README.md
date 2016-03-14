@@ -42,8 +42,8 @@
 - [ ] Seller can see a Complication of their daily campaign stats on their Watch home screen (optional)
 
 ## Video Walkthroughs
-### Week 1
-  <img src='screencaps/week1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
 ### Week 2
   <img src='screencaps/week2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+### Week 1
+  <img src='screencaps/week1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
