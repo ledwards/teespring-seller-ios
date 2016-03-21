@@ -12,6 +12,7 @@ import Alamofire
 let HOST = "api2.teedown.com"
 let PORT = 443
 let APP_ID = "e60c5b0535c5600bc074d2306e2dca7a2d4a692379417f43253db0c2e2254ff0"
+let ROOT_WEB_URL = "https://www.teespring.com"
 
 let PATHS = [
     "auth": "/seller/v1/auth",
@@ -46,7 +47,7 @@ struct TSAPI {
     }
     
     func getCampaigns(searchTerm: String? = nil, successCallback: (NSDictionary) -> Void, errorCallback: ((NSError?) -> Void)?) {
-        let params = ["access_token": self.accessToken, "states": "active,success", "query": searchTerm ?? ""]
+        let params = ["access_token": self.accessToken, "states": "active,success", "search": searchTerm ?? ""]
         apiRequest(Alamofire.Method.GET, pathName: "campaigns", parameters: params, successCallback: successCallback, errorCallback: errorCallback)
     }
     

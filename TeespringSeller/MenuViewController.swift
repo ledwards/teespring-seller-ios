@@ -12,7 +12,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewControllers: [UIViewController] = []
-    let titles = ["Dashboard", "Designs"]
+    let titles = ["Dashboard", "Designs", "Notifications"]
     
     var hamburgerViewController: HamburgerViewController!
     
@@ -23,8 +23,9 @@ class MenuViewController: UIViewController {
         
         let dashboardVC = storyboard.instantiateViewControllerWithIdentifier("DashboardNavigationController") as! UINavigationController
         let designsVC = storyboard.instantiateViewControllerWithIdentifier("DesignsNavigationController") as! UINavigationController
+        let notificationsVC = storyboard.instantiateViewControllerWithIdentifier("NotificationsNavigationController") as! UINavigationController
         
-        viewControllers = [dashboardVC, designsVC]
+        viewControllers = [dashboardVC, designsVC, notificationsVC]
         
         tableView.backgroundColor = TSColor.lightBlueColor()
         

@@ -14,6 +14,7 @@ class CampaignRoot {
     let totalSoldCount: Int?
     let lastCampaignSoldCount: Int?
     let totalPayoutAmount: Money?
+    let webURL: NSURL?
     
     var soldDescription: String {
         if let total = totalSoldCount, last = lastCampaignSoldCount {
@@ -29,6 +30,12 @@ class CampaignRoot {
         designURL = NSURL(string: dictionary["design_thumbnail_url"] as! String)
         totalSoldCount = dictionary["total_units"] as? Int
         totalPayoutAmount = Money(dictionary: dictionary["total_payout_amount"] as! NSDictionary)
+        if let slug = dictionary["slug"] {
+            webURL = NSURL(string: "\(ROOT_WEB_URL)/\(slug)")
+        } else {
+            webURL = NSURL(string: "\(ROOT_WEB_URL)/notfound")
+        }
+        webURL?.absoluteString
 
         let campaigns = dictionary["campaigns"] as! [NSDictionary]
         lastCampaignSoldCount = campaigns.last!["units"] as? Int

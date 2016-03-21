@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AirshipKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,13 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let loginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
-//        
-//        window?.rootViewController = loginViewController
-//        window?.makeKeyAndVisible()
         
         return true
     }

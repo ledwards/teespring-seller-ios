@@ -26,6 +26,7 @@
 		9B1B33DA1C8D338C00533D89 /* UpdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33D91C8D338C00533D89 /* UpdateCell.swift */; };
 		9B1B33DD1C8D34FA00533D89 /* DesignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */; };
 		9B1B33DE1C8D34FA00533D89 /* DesignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */; };
+		9B4EDF951C9FB8BB00B28A94 /* CampaignWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EDF941C9FB8BB00B28A94 /* CampaignWebViewController.swift */; };
 		9B8E05D01C8D3E160044AB2F /* CampaignRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */; };
 		9B8E05D21C8D75130044AB2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8E05D11C8D75130044AB2F /* Assets.xcassets */; };
 		9B8E05DA1C9629B80044AB2F /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05D91C9629B80044AB2F /* OrderCell.swift */; };
@@ -33,8 +34,45 @@
 		9B8E05DE1C9653DF0044AB2F /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05DD1C9653DF0044AB2F /* Money.swift */; };
 		9B8E05E01C9662EE0044AB2F /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05DF1C9662EE0044AB2F /* OrderDetailViewController.swift */; };
 		9B8E05E21C966ECC0044AB2F /* LineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05E11C966ECC0044AB2F /* LineItemCell.swift */; };
+		9B8E05E41C9F4D9B0044AB2F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E05E31C9F4D9B0044AB2F /* NotificationsViewController.swift */; };
+		9BA0CF691C9F662800524578 /* Airship in Resources */ = {isa = PBXBuildFile; fileRef = 9BA0CF671C9F662800524578 /* Airship */; };
+		9BA0CF6A1C9F662800524578 /* AirshipKit in Resources */ = {isa = PBXBuildFile; fileRef = 9BA0CF681C9F662800524578 /* AirshipKit */; };
+		9BA0CF711C9F666400524578 /* AirshipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA0CF701C9F665200524578 /* AirshipKit.framework */; };
+		9BA0CF721C9F666400524578 /* AirshipKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA0CF701C9F665200524578 /* AirshipKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BBAE51A1C9F5D340022506B /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BBAE5191C9F5D340022506B /* AirshipConfig.plist */; };
 		AE672F1EF16FA73F71651250 /* Pods_TeespringSeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B98378F826036219080AE19 /* Pods_TeespringSeller.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BA0CF6F1C9F665200524578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA0CF6B1C9F665200524578 /* AirshipKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 494DD9571B0EB677009C134E;
+			remoteInfo = AirshipKit;
+		};
+		9BA0CF731C9F666400524578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA0CF6B1C9F665200524578 /* AirshipKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 494DD9561B0EB677009C134E;
+			remoteInfo = AirshipKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BA0CF751C9F666400524578 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9BA0CF721C9F666400524578 /* AirshipKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7F01A877F9356A090D86EE35 /* Pods-TeespringSeller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeespringSeller.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeespringSeller/Pods-TeespringSeller.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +98,7 @@
 		9B1B33D91C8D338C00533D89 /* UpdateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCell.swift; sourceTree = "<group>"; };
 		9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignsViewController.swift; sourceTree = "<group>"; };
 		9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignDetailViewController.swift; sourceTree = "<group>"; };
+		9B4EDF941C9FB8BB00B28A94 /* CampaignWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignWebViewController.swift; sourceTree = "<group>"; };
 		9B8E05CF1C8D3E160044AB2F /* CampaignRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignRootCell.swift; sourceTree = "<group>"; };
 		9B8E05D11C8D75130044AB2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B8E05D91C9629B80044AB2F /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
@@ -67,6 +106,11 @@
 		9B8E05DD1C9653DF0044AB2F /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		9B8E05DF1C9662EE0044AB2F /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		9B8E05E11C966ECC0044AB2F /* LineItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItemCell.swift; sourceTree = "<group>"; };
+		9B8E05E31C9F4D9B0044AB2F /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		9BA0CF671C9F662800524578 /* Airship */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Airship; sourceTree = "<group>"; };
+		9BA0CF681C9F662800524578 /* AirshipKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AirshipKit; sourceTree = "<group>"; };
+		9BA0CF6B1C9F665200524578 /* AirshipKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AirshipKit.xcodeproj; path = "../../../../../Downloads/libUAirship-7.0.2/AirshipKit/AirshipKit.xcodeproj"; sourceTree = "<group>"; };
+		9BBAE5191C9F5D340022506B /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
 		E3816405F8C2C950D576D17E /* Pods-TeespringSeller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeespringSeller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeespringSeller/Pods-TeespringSeller.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA0CF711C9F666400524578 /* AirshipKit.framework in Frameworks */,
 				AE672F1EF16FA73F71651250 /* Pods_TeespringSeller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +168,10 @@
 				9B1B33A71C8C005A00533D89 /* Main.storyboard */,
 				9B1B33AC1C8C005A00533D89 /* LaunchScreen.storyboard */,
 				9B1B33AF1C8C005A00533D89 /* Info.plist */,
+				9BBAE5191C9F5D340022506B /* AirshipConfig.plist */,
+				9BA0CF6B1C9F665200524578 /* AirshipKit.xcodeproj */,
+				9BA0CF671C9F662800524578 /* Airship */,
+				9BA0CF681C9F662800524578 /* AirshipKit */,
 			);
 			path = TeespringSeller;
 			sourceTree = "<group>";
@@ -137,6 +186,8 @@
 				9B1B33DB1C8D34FA00533D89 /* DesignsViewController.swift */,
 				9B1B33DC1C8D34FA00533D89 /* DesignDetailViewController.swift */,
 				9B8E05DF1C9662EE0044AB2F /* OrderDetailViewController.swift */,
+				9B8E05E31C9F4D9B0044AB2F /* NotificationsViewController.swift */,
+				9B4EDF941C9FB8BB00B28A94 /* CampaignWebViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +242,14 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		9BA0CF6C1C9F665200524578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BA0CF701C9F665200524578 /* AirshipKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C6F064FDB1D280C5B3F03AC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +271,12 @@
 				9B1B339E1C8C005A00533D89 /* Resources */,
 				1E3AD259F56E56E6D0B2CB41 /* Embed Pods Frameworks */,
 				6146BA62E89948A0EACD736C /* Copy Pods Resources */,
+				9BA0CF751C9F666400524578 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9BA0CF741C9F666400524578 /* PBXTargetDependency */,
 			);
 			name = TeespringSeller;
 			productName = TeespringSeller;
@@ -249,12 +310,28 @@
 			mainGroup = 9B1B33971C8C005A00533D89;
 			productRefGroup = 9B1B33A11C8C005A00533D89 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9BA0CF6C1C9F665200524578 /* Products */;
+					ProjectRef = 9BA0CF6B1C9F665200524578 /* AirshipKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9B1B339F1C8C005A00533D89 /* TeespringSeller */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9BA0CF701C9F665200524578 /* AirshipKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AirshipKit.framework;
+			remoteRef = 9BA0CF6F1C9F665200524578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9B1B339E1C8C005A00533D89 /* Resources */ = {
@@ -264,6 +341,9 @@
 				9B1B33AE1C8C005A00533D89 /* LaunchScreen.storyboard in Resources */,
 				9B8E05D21C8D75130044AB2F /* Assets.xcassets in Resources */,
 				9B1B33A91C8C005A00533D89 /* Main.storyboard in Resources */,
+				9BA0CF691C9F662800524578 /* Airship in Resources */,
+				9BA0CF6A1C9F662800524578 /* AirshipKit in Resources */,
+				9BBAE51A1C9F5D340022506B /* AirshipConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,11 +417,13 @@
 				9B1B33D21C8CEF0500533D89 /* TSAPI.swift in Sources */,
 				9B1B33BB1C8C175000533D89 /* MenuViewController.swift in Sources */,
 				9B1B33CD1C8CEED500533D89 /* Order.swift in Sources */,
+				9B8E05E41C9F4D9B0044AB2F /* NotificationsViewController.swift in Sources */,
 				9B1B33CB1C8CEED500533D89 /* CampaignRoot.swift in Sources */,
 				9B1B33B71C8C169300533D89 /* LoginViewController.swift in Sources */,
 				9B8E05E21C966ECC0044AB2F /* LineItemCell.swift in Sources */,
 				9B1B33D51C8D1B4000533D89 /* MenuCell.swift in Sources */,
 				9B8E05DC1C962EB90044AB2F /* LineItem.swift in Sources */,
+				9B4EDF951C9FB8BB00B28A94 /* CampaignWebViewController.swift in Sources */,
 				9B1B33DA1C8D338C00533D89 /* UpdateCell.swift in Sources */,
 				9B1B33A41C8C005A00533D89 /* AppDelegate.swift in Sources */,
 				9B1B33CE1C8CEED500533D89 /* TSColor.swift in Sources */,
@@ -349,6 +431,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BA0CF741C9F666400524578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AirshipKit;
+			targetProxy = 9BA0CF731C9F666400524578 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9B1B33A71C8C005A00533D89 /* Main.storyboard */ = {

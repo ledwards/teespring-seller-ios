@@ -81,16 +81,25 @@ class DesignDetailViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var indexPath: NSIndexPath? = nil
-        if let cell = sender as? OrderCell {
-            indexPath = tableView.indexPathForCell(cell)
-            let order = self.orders[indexPath!.row]
-            let vc = segue.destinationViewController as! OrderDetailViewController
-            vc.order = order
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "DesignDetailViewSegue":
+                var indexPath: NSIndexPath? = nil
+                if let cell = sender as? OrderCell {
+                    indexPath = tableView.indexPathForCell(cell)
+                    let order = self.orders[indexPath!.row]
+                    let vc = segue.destinationViewController as! OrderDetailViewController
+                    vc.order = order
+                }
+            case "CampaignWebViewSegue":
+                let vc = segue.destinationViewController as! CampaignWebViewController
+                if let webURL = self.campaignRoot!.webURL {
+                    vc.url = webURL
+                }
+            default: break
+            }
         }
-        
     }
-
 }
 
 extension DesignDetailViewController: UITableViewDataSource {

@@ -18,15 +18,15 @@
 
 ### Campaign List
 - [x] A seller can view a list of their active campaigns (required)
-- [ ] A seller can view their list of campaigns in table view or collection view format (optional)
-- [ ] A seller can narrow this list down via search (required)
+- [x] A seller can narrow this list down via search (required)
 - [ ] A seller can filter the list of campaigns by campaign state (active, successful, failed, draft) (required)
 - [ ] A seller can sort this list of campaigns by various fields (optional)
+- [ ] A seller can view their list of campaigns in table view or collection view format (optional)
 
 ### Campaign Detail
 - [x] A seller can tap a campaign in the list/collection view to see campaign details (required)
 - [x] A seller can see the order history of the campaign (required)
-- [ ] A seller can tap a link to see the buyer's view of the campaign on mobile (required)
+- [x] A seller can tap a link to see the buyer's view of the campaign on mobile (required)
 - [ ] A seller can see a graph of sales over time for this campaign (optional)
 - [ ] Seller can see a map of their buyers (optional)
 
